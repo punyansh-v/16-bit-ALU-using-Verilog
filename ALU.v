@@ -23,12 +23,12 @@
 module ALU(
     input [15:0] x,
     input [15:0] y,
-    input zx,//sets x=0,if 1
-    input nx,//bitwise not x, if 1
-    input zy,//sets y=0, if 1
-    input ny,// bitwise not y, if 1
-    input f,// if 1, x+y(addition), else x&y(bitwise and)
-    input no,// bitwise not the output of f, if 1
+    input zx,//if zx==1, x=0;
+    input nx,//if nx==1, x=!x;
+    input zy,//if zy==1, y=0;
+    input ny,//if ny==1, y=!y;
+    input f, //if f ==1, x+y(addition, not OR operation) else x&y;
+    input no,//if no==1, output=!output;
     output [15:0] out,
     output zr,// 1, if output=0
     output ng//1, if output<0
