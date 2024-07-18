@@ -27,33 +27,32 @@ These 6 bits are:
 Using these 6-bits this ALU can perform 20 Logical and Arithmetical operations.
 These operations and bit-modes are listed below. The explanation behind the selection of bits can be deduced with little effort.
 
+**Operation	zx	nx	zy	ny	f	no**
+0			1	0	1	0	0	0
+1			1	1	1	1	1	1
+-1			1	1	1	0	1	0
+x			0	0	1	1	0	0
+y			1	1	0	0	0	0
+!x			0	0	1	1	0	1
+!y			1	1	0	0	0	1
+-x			0	0	1	1	1	1
+-y			1	1	0	0	1	1
+x+1			0	1	1	1	1	1
+y+1			1	1	0	1	1	1
+x-1			0	0	1	1	1	0
+y-1			1	1	0	0	1	0
+x+y			0	0	0	0	1	0
+x-y			0	1	0	0	1	1
+y-x			0	0	0	1	1	1
+xANDy		0	0	0	0	0	0
+xNANDy		0	0	0	0	0	1
+xORy		0	1	0	1	0	1
+xNORy		0	1	0	1	0	0
 
-	**Operation	zx	nx	zy	ny	f	no**
-
-	0			1	0	1	0	0	0
-	1			1	1	1	1	1	1
-	-1			1	1	1	0	1	0
-	x			0	0	1	1	0	0
-	y			1	1	0	0	0	0
-	!x			0	0	1	1	0	1
-	!y			1	1	0	0	0	1
-	-x			0	0	1	1	1	1
-	-y			1	1	0	0	1	1
-	x+1			0	1	1	1	1	1
-	y+1			1	1	0	1	1	1
-	x-1			0	0	1	1	1	0
-	y-1			1	1	0	0	1	0
-	x+y			0	0	0	0	1	0
-	x-y			0	1	0	0	1	1
-	y-x			0	0	0	1	1	1
-	xANDy		0	0	0	0	0	0
-	xNANDy		0	0	0	0	0	1
-	xORy		0	1	0	1	0	1
-	xNORy		0	1	0	1	0	0
 
 Apart from these, three comparison operations can also be done.
 Perform subtraction, i.e. x-y
-	* if x<y, ng=1, zr=0
-    * if x=y, ng=0. zr=0
-    * if x>y, ng=0, zr=0
+	+ if x<y, ng=1, zr=0
+ 	+ if x=y, ng=0. zr=0
+  	+ if x>y, ng=0, zr=0
 Finally, the ALU can fulfill its purpose.
