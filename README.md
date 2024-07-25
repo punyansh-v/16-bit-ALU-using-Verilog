@@ -16,7 +16,7 @@ It is similar to half adder, except for the part that it performs addition on 3-
 It performs binary addition of two 16-bit numbers, using a half adder and full adders. `Carry` of each adder is carry forwarded to next adder. It gives an 16-bit output.
 
 ## Implementation and design
-The ALU has two 16-bit inputs(i.e. operands) and one 16-bit output, two 1-bit comparison outputs and 6 control bits for selection of the operation to be perfromed.
+The ALU has two 16-bit inputs(i.e. operands) and one 16-bit output, two 1-bit comparison outputs and 6 control bits for selection of the operation to be performed.
 These 6 bits are:
 `zx,nx,zy,ny,f,no`.
   * if zx is `true`, then x is set to `0`.
